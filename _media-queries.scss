@@ -1,0 +1,23 @@
+// Media Queries
+@use 'variables';
+
+@media screen and (max-width: 1023px) {
+    .container {
+        max-width: variables.$mobile-max-width;
+    }
+
+    .products {
+        grid-template-columns: variables.$tablet-grid-columns;
+        column-gap: variables.$tablet-column-gap;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .products {
+        display: block;
+
+        .product-item {
+            margin-bottom: 32px;
+        }
+    }
+}
